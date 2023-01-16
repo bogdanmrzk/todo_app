@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-<p>Login</p>
+{% extends 'todo_app/base.html' %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Login">
-</form>
+{% block content %}
 
-<p>Don't have an account?</p>
-<a href="{% url 'register-task' %}">Register</a>
+<div class="card">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login" class="button">
+    </form>
 
-</body>
-</html>
+    <p>Don't have an account?</p>
+    <a href="{% url 'register-task' %}">Register</a>
+</div>
+
+
+{% endblock content %}

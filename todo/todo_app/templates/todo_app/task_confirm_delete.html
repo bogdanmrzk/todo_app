@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Delete</title>
-</head>
+{% extends 'todo_app/base.html' %}
+
+{% block content %}
+
 <body>
 <form method="post">
     {% csrf_token %}
@@ -13,3 +11,5 @@
 </form>
 </body>
 </html>
+
+{% endblock content %}
