@@ -69,7 +69,7 @@ class TaskCreate(CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
-        return super(TaskCreate).form_valid(form)
+        return super(TaskCreate, self).form_valid(form)
 
 
 class TaskUpdate(UpdateView):
