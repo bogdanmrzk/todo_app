@@ -2,14 +2,16 @@
 
 {% block content %}
 
-<body>
-<form method="post">
-    {% csrf_token %}
-    <p><a href="{% url 'all_tasks' %}">Go back</a></p>
-    <p><a>Delete this '{{ task }}'?</a></p>
-    <input value="Delete" type="submit">
-</form>
-</body>
-</html>
+<div class="header-bar">
+    <a href="{% url 'all_tasks' %}">&#8592; Go back</a>
+</div>
+
+<div class="card">
+    <form method="post">
+        {% csrf_token %}
+        <p><a>Delete this '{{ task }}'?</a></p>
+        <input value="Delete" type="submit" style="color: #f55540;">
+    </form>
+</div>
 
 {% endblock content %}
